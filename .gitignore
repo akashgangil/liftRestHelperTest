@@ -3,10 +3,12 @@ syntax: glob
 *.ser
 *.class
 *~
+*.swp
 *.bak
 *.off
 *.old
 .DS_Store
+.cache 
 
 # logs
 derby.log

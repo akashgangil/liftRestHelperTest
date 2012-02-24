@@ -23,6 +23,12 @@ libraryDependencies ++= {
 }
   
 libraryDependencies ++= Seq(
+  "org.eclipse.jetty" % "jetty-webapp" % "8.0.4.v20111024" % "container", // For Jetty 8
+  "org.eclipse.jetty" % "jetty-webapp" % "8.0.4.v20111024" % "test->default", // For Jetty 8
+  "org.eclipse.jetty" % "jetty-server" % "8.0.4.v20111024" % "test->default", // For Jetty 6, add scope test to make jetty avl. for tests
+  //"org.eclipse.jetty" % "jetty-webapp" % "7.3.0.v20110203" % "container", // For Jetty 7
+  //"org.mortbay.jetty" % "jetty" % "6.1.22" % "jetty,test", // For Jetty 6, add scope test to make jetty avl. for tests
+  "org.scala-tools.testing" % "specs_2.9.0" % "1.6.8" % "test", // For specs.org tests
   "junit" % "junit" % "4.5" % "test->default",
   "org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
   "javax.servlet" % "servlet-api" % "2.5" % "provided->default",

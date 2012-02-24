@@ -1,5 +1,6 @@
 # use glob syntax.
 syntax: glob
+.cache
 *.ser
 *.class
 *~
@@ -8,8 +9,7 @@ syntax: glob
 *.off
 *.old
 .DS_Store
-.cache 
-
+*.db
 # logs
 derby.log
 
@@ -43,24 +43,3 @@ project/plugins/src_managed/
 project/project/target
 project/target
 
-# other scm
-.svn
-.CVS
-.hg*
-
-# switch to regexp syntax.
-#  syntax: regexp
-#  ^\.pc/
-
-# IntelliJ
-*.eml
-*.iml
-*.ipr
-*.iws
-.idea
-
-# Pax Runner (for easy OSGi launching)
-runner
-
-#DB files
-*.db

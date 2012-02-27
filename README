@@ -9,3 +9,20 @@ To start jetty, run container:start
 To stop jetty, run constainer:stop
 
 Enjoy building web applications with Lift!
+
+
+Some other commands
+
+Generate Eclipse Project Files
+eclipse with-sources=true
+
+Compile
+compile
+
+Run the Web-Server application
+run-main RunWebApp
+
+Run a console, with all compiled classes and dependencies available
+console
+
+

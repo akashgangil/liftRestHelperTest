@@ -11,6 +11,9 @@ import Loc._
 import mapper._
 
 import code.model._
+import code.snippet.BasicWithHelper
+
+/*import code.snippet.MyRest*/
 
 
 /**
@@ -26,7 +29,7 @@ class Boot {
 			     "jdbc:h2:lift_proto.db;AUTO_SERVER=TRUE",
 			     Props.get("db.user"), Props.get("db.password"))
 
-      LiftRules.unloadHooks.append(vendor.closeAllConnections_! _)
+      LiftRules.unloadHooks.append(vendor.closeAllConnections_!)
 
       DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
     }
@@ -38,6 +41,11 @@ class Boot {
 
     // where to search snippet
     LiftRules.addToPackages("code")
+
+    //hooking MyRest
+    /*LiftRules.dispatch.append(MyRest) //stateful : server container session
+    LiftRules.statelessDispatchTable.append(MyRest)*/
+
 
     // Build SiteMap
     def sitemap = SiteMap(
@@ -53,6 +61,7 @@ class Boot {
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
     LiftRules.setSiteMapFunc(() => sitemapMutators(sitemap))
+    LiftRules.statelessDispatchTable.append(BasicWithHelper)
 
     // Use jQuery 1.4
     LiftRules.jsArtifacts = net.liftweb.http.js.jquery.JQuery14Artifacts

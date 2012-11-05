@@ -12,6 +12,10 @@ seq(webSettings: _*)
 resolvers += "Java.net Maven2 Repo" at "http://download.java.net/maven/2/"
 
 resolvers += "Sonatype OSS Snapshot Repository" at "https://oss.sonatype.org/content/repositories/snapshots/"
+
+resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+
+libraryDependencies += "com.typesafe.akka" % "akka-actor" % "2.0.3"
  
 libraryDependencies ++= {
   val liftVersion = "2.4"

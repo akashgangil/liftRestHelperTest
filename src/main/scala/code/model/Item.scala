@@ -1,12 +1,12 @@
-package code.snippet
+package code.model
 
 /**
  * Created with IntelliJ IDEA.
  * User: akash
- * Date: 25/9/12
- * Time: 3:25 PM
+ * Date: 5/11/12
+ * Time: 4:27 PM
  * To change this template use File | Settings | File Templates.
  */
-class HelloWorld {
+class Item {
 
 }
